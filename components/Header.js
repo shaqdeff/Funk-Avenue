@@ -4,7 +4,10 @@ import React, { useEffect, useRef } from 'react';
 import close from '../images/close-outline.svg';
 import menu from '../images/menu-outline.svg';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import gsap from 'gsap';
+
 function Header() {
   let resMenu = useRef(null);
   let resMenuHeader = useRef(null);
@@ -12,7 +15,9 @@ function Header() {
   let resMenuItem2 = useRef(null);
   let resMenuItem3 = useRef(null);
   let resMenuItem4 = useRef(null);
+
   const menu_open = gsap.timeline({ paused: 'true', reversed: 'true' });
+
   useEffect(() => {
     menu_open.to(resMenu.current, {
       y: 0,
@@ -36,9 +41,19 @@ function Header() {
       }
     );
   });
+
   function menuOpen() {
     menu_open.reversed() ? menu_open.play() : menu_open.reverse();
   }
+
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(sectionId, {
+      duration: 500,
+      smooth: 'easeInOutQuart',
+    });
+    menu_open.reverse();
+  };
+
   return (
     <div>
       <div
@@ -47,10 +62,12 @@ function Header() {
         <div
           className="flex items-start justify-between w-[100%] h-fit py-[5px]"
           ref={resMenuHeader}>
-          <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
+          <Link
+            href="/"
+            className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
             Funk <br />
             Avenue
-          </div>
+          </Link>
           <div
             onClick={menuOpen}
             className="block md:hidden cursor-pointer mx-[5px]">
@@ -59,32 +76,56 @@ function Header() {
         </div>
         <div className="mx-2 my-10 space-y-1">
           <span className="overflow-hidden block">
-            <div
-              ref={resMenuItem1}
+            <ScrollLink
+              onClick={() => scrollToSection('#sectionId')}
+              to="work-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              // ref={resMenuItem1}
               className="font-neutralFace font-bold text-[30px]">
               WORK
-            </div>
+            </ScrollLink>
           </span>
           <span className="overflow-hidden block">
-            <div
-              ref={resMenuItem2}
+            <ScrollLink
+              onClick={() => scrollToSection('#sectionId')}
+              to="about-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              // ref={resMenuItem2}
               className="font-neutralFace font-bold text-[30px]">
               ABOUT
-            </div>
+            </ScrollLink>
           </span>
           <span className="overflow-hidden block">
-            <div
-              ref={resMenuItem3}
+            <ScrollLink
+              onClick={() => scrollToSection('#sectionId')}
+              to="publications-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              // ref={resMenuItem3}
               className="font-neutralFace font-bold text-[30px]">
               PUBLICATIONS
-            </div>
+            </ScrollLink>
           </span>
           <span className="overflow-hidden block">
-            <div
-              ref={resMenuItem4}
+            <ScrollLink
+              onClick={() => scrollToSection('#sectionId')}
+              to="studio-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              // ref={resMenuItem4}
               className="font-neutralFace font-bold text-[30px]">
-              OFFICE
-            </div>
+              STUDIO
+            </ScrollLink>
           </span>
         </div>
       </div>
@@ -95,18 +136,42 @@ function Header() {
           <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
             Funk <br /> Avenue
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+          <ScrollLink
+            to="work-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             WORK
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+          </ScrollLink>
+          <ScrollLink
+            to="about-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             ABOUT
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+          </ScrollLink>
+          <ScrollLink
+            to="publications-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             PUBLICATIONS
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
-            OFFICE
-          </div>
+          </ScrollLink>
+          <ScrollLink
+            to="studio-section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+            STUDIO
+          </ScrollLink>
           <div
             onClick={menuOpen}
             className="block md:hidden cursor-pointer mx-[5px]">
@@ -115,7 +180,7 @@ function Header() {
         </div>
         <div className="flex items-start text-sm justify-between sm:justify-evenly px-5 w-[100%] h-fit">
           <div>
-            An independent <br /> music agency
+            An independent <br /> music partnership
           </div>
           <div>Nairobi</div>
         </div>

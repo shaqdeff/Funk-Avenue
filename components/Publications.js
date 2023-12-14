@@ -1,16 +1,16 @@
 /** @format */
 
-import Image from "next/image";
-import React from "react";
-import publish from "../images/publications.png";
+import Image from 'next/image';
+import React from 'react';
+import publish from '../images/publications.png';
 function Publications() {
   return (
-    <div className="relative font-neutralFace">
+    <div id="publications-section" className="relative font-neutralFace">
       <div className="px-3">
         <div className="w-full h-[1px] bg-white"></div>
         <div className="flex text-xl md:text-4xl my-3 font-bold justify-between mb-36 w-full">
-          <div>MEET US</div>
-          <div>SERVICES</div>
+          <div>EPs</div>
+          <div>ALBUMS</div>
           <div>ALL WORK</div>
         </div>
       </div>

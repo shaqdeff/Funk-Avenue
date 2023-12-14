@@ -2,7 +2,9 @@ import React from 'react';
 
 function WhoWeAre() {
   return (
-    <div className="relative my-10 px-3 py-2 h-[80vh] font-neutralFace">
+    <div
+      id="about-section"
+      className="relative my-10 px-3 py-2 h-[80vh] font-neutralFace">
       <div className="w-full h-[1px] bg-white"></div>
       <div className="flex justify-between w-full text-xs py-2">
         <div>Who We Are</div>

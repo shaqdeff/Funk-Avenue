@@ -19,7 +19,7 @@ function SwiperSliderComponent() {
     w < 768 ? setSlides(1.2) : setSlides(1.5);
   }, []);
   return (
-    <div className="relative">
+    <div id="work-section" className="relative">
       <Swiper
         spaceBetween={50}
         slidesPerView={slides}
