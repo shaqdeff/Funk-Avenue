@@ -1,15 +1,17 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import imageSlider1 from "../images/imageSlider1.png";
-import imageSlider2 from "../images/imageSlider2.png";
-import imageSlider3 from "../images/imageSlider3.png";
-import imageSlider4 from "../images/imageSlider4.png";
-import imageSlider5 from "../images/imageSlider5.png";
-import imageSlider6 from "../images/imageSlider6.png";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import imageSlider1 from '../images/pressure.webp';
+import imageSlider2 from '../images/frenzy.webp';
+import imageSlider3 from '../images/whitewash.webp';
+import imageSlider4 from '../images/mnyonge.webp';
+import imageSlider5 from '../images/ngori.webp';
+import imageSlider6 from '../images/takeitlow.webp';
+import Image from 'next/image';
+import Link from 'next/link';
+
 function SwiperSliderComponent() {
   const [slides, setSlides] = useState(0);
   useEffect(() => {
@@ -22,14 +24,13 @@ function SwiperSliderComponent() {
         spaceBetween={50}
         slidesPerView={slides}
         grabCursor={true}
-        className="w-full font-neutralFace h-[50vh] md:h-[65vh] relative mt-[40vh] md:mt-[33vh]"
-      >
+        className="w-full font-neutralFace h-[50vh] md:h-[78vh] relative mt-[30vh] md:mt-[22vh]">
         <SwiperSlide className="flex justify-start flex-col w-fit">
           <div className="h-[100%] flex items-end">
             <Image
               alt=""
               src={imageSlider1}
-              className="w-full md:w-[80%] h-[100%] object-contain"
+              className="w-full md:w-3/5 h-[100%] object-cover"
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
@@ -37,9 +38,12 @@ function SwiperSliderComponent() {
               <p>MULTIPLE PROJECTS</p>
               <p>(01)</p>
             </div>
-            <div className="text-5xl font-bold md:text-7xl lg:text-9xl 2xl:text-[12rem] leading-none">
-              HEINEKEN
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/S9v2db2IG1o"
+              target="_blank">
+              PRESSURE
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="flex justify-start flex-col-reverse w-fit">
@@ -47,20 +51,23 @@ function SwiperSliderComponent() {
             <Image
               alt=""
               src={imageSlider2}
-              className="w-full md:w-[80%] h-[100%] object-contain"
+              className="w-full md:w-3/5 h-[100%] object-cover"
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
             <div className="flex flex-col justify-between h-full py-1 px-2">
               <p>
-                <span className="text-red-700">G-STAR Raw</span>
-                <br /> 1:00
+                <span className="text-red-700">FRENZY</span>
+                <br /> 3:13
               </p>
               <p>(02)</p>
             </div>
-            <div className="text-5xl font-bold md:text-7xl lg:text-9xl leading-none">
-              G-STAR RAW
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/hyq7AEN3tf4"
+              target="_blank">
+              FRENZY
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="flex justify-start flex-col w-fit">
@@ -68,20 +75,23 @@ function SwiperSliderComponent() {
             <Image
               alt=""
               src={imageSlider3}
-              className="w-full md:w-[80%] h-[100%] object-contain"
+              className="w-full md:w-3/5 h-[100%] object-cover"
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
             <div className="flex flex-col justify-between h-full py-1 px-2">
               <p>
-                <span className="text-red-700">SKODA</span>
-                <br /> 2:01
+                <span className="text-red-700">WHITE WASH</span>
+                <br /> 4:05
               </p>
               <p>(03)</p>
             </div>
-            <div className="text-5xl font-bold md:text-7xl 2xl:text-[12rem] lg:text-9xl leading-none">
-              SKODA
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/6TwUcBUM1Ys"
+              target="_blank">
+              WHITE WASH
+            </Link>
             <div></div>
           </div>
         </SwiperSlide>
@@ -96,14 +106,17 @@ function SwiperSliderComponent() {
           <div className="flex justify-between items-end h-[100%]">
             <div className="flex flex-col justify-between h-full py-1 px-2">
               <p>
-                <span className="text-red-700">PUBLICIS MILAN</span>
-                <br /> 1:10
+                <span className="text-red-700">MNYONGE</span>
+                <br /> 2:50
               </p>
               <p>(04)</p>
             </div>
-            <div className="text-5xl font-bold md:text-7xl 2xl:text-[12rem] lg:text-9xl leading-none">
-              DIESEL
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/XtlPafC4jFc?list=RDEMsQHjkwTXXN0eRaDag10_Ag"
+              target="_blank">
+              MNYONGE
+            </Link>
             <div></div>
           </div>
         </SwiperSlide>
@@ -112,20 +125,23 @@ function SwiperSliderComponent() {
             <Image
               alt=""
               src={imageSlider5}
-              className="w-full md:w-[60%] h-[100%] object-contain"
+              className="w-full md:w-3/5 h-[100%] object-cover"
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
             <div className="flex flex-col justify-between h-full py-1 px-2">
               <p>
-                <span className="text-red-700">BARBARA BOLOGNA</span>
-                <br /> 14:14
+                <span className="text-red-700">NGORI</span>
+                <br /> 3:30
               </p>
               <p>(05)</p>
             </div>
-            <div className="text-5xl 2xl:text-[12rem] font-bold md:text-7xl lg:text-9xl leading-none">
-              EMBODIME
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/cZUZcUAtc1k?list=RDEMsQHjkwTXXN0eRaDag10_Ag"
+              target="_blank">
+              NGORI
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="flex justify-start flex-col-reverse w-fit">
@@ -133,20 +149,23 @@ function SwiperSliderComponent() {
             <Image
               alt=""
               src={imageSlider6}
-              className="w-full md:w-[65%] h-[100%] object-contain"
+              className="w-full md:w-3/5 h-[100%] object-cover"
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
             <div className="flex flex-col justify-between h-full py-1 px-2">
               <p>
-                <span className="text-red-700">PUBLICIS</span>
-                <br /> 1:17
+                <span className="text-red-700">LOW</span>
+                <br /> 4:00
               </p>
               <p>(06)</p>
             </div>
-            <div className="text-5xl font-bold md:text-7xl lg:text-9xl 2xl:text-[12rem] leading-none">
-              MERCEDES
-            </div>
+            <Link
+              className="text-5xl font-bold md:text-5xl lg:text-7xl 2xl:text-[12rem] leading-none"
+              href="https://youtu.be/Gaxs1kRRETY"
+              target="_blank">
+              LOW
+            </Link>
             <div></div>
           </div>
         </SwiperSlide>
