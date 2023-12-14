@@ -16,8 +16,8 @@ function WhoWeAre() {
         <div className="text-3xl uppercase md:text-5xl font-bold leading-snug indent-[30vw] my-2">
           Funk Avenue is a kenyan born & bred musical duo based in Nairobi ,
           Kenya. Their critically acclaimed projects are genre bending which
-          sets the kenyan music scene to new heights. Not Afraid to Evolve and
-          create. Enjoy their new EP ahora festejamos out now!
+          sets the kenyan music scene to new heights. Not afraid to evolve and
+          create.
         </div>
       </div>
     </div>

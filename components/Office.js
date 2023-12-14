@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import office from '../images/home-office.png';
+import office from '../images/studio.png';
 
 function Office() {
   return (
@@ -24,9 +24,7 @@ function Office() {
       </div>
       <div className="w-full h-[2px] bg-white"></div>
       <div className="flex flex-col lg:flex-row justify-between py-10 pb-32 ">
-        <div className="text-lg">
-          (LETS HEAR <br /> SOMETHING)
-        </div>
+        <div className="text-lg">(HEAR US OUT)</div>
         <div className="text-2xl md:text-3xl lg:text-8xl font-bold">
           FUNKAVENUE.COM
         </div>
