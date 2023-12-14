@@ -2,8 +2,17 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 function Footer() {
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(sectionId, {
+      duration: 500,
+      smooth: 'easeInOutQuart',
+    });
+    menu_open.reverse();
+  };
+
   return (
     <div className="relative font-neutralFace px-3">
       <div className="hidden lg:block mb-[10vh]">
@@ -43,24 +52,60 @@ function Footer() {
         </Link>
       </div>
       <div className="flex pt-5 flex-col lg:flex-row items-end lg:items-center justify-between">
-        <div>TOP</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">WORK</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">ABOUT</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">
+        <ScrollLink
+          className="cursor-pointer"
+          to="header"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}>
+          TOP
+        </ScrollLink>
+        <ScrollLink
+          to="work-section"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer mx-1 font-neutralFace font-bold text-[30px]">
+          WORK
+        </ScrollLink>
+        <ScrollLink
+          to="about-section"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer mx-1 font-neutralFace font-bold text-[30px]">
+          ABOUT
+        </ScrollLink>
+        <ScrollLink
+          to="publications-section"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer mx-1 font-neutralFace font-bold text-[30px]">
           PUBLICATIONS
-        </div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">
-          OFFICE
-        </div>
+        </ScrollLink>
+        <ScrollLink
+          to="studio-section"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer mx-1 font-neutralFace font-bold text-[30px]">
+          STUDIO
+        </ScrollLink>
       </div>
       <div className="w-full h-[2px] bg-white"></div>
       <div className="flex flex-col lg:flex-row lg:mt-20 mb-2 items-start lg:items-end justify-between">
         <div className="my-5 lg:my-0">COPYRIGHT 2023 - FA</div>
-        <div>JOBS</div>
+        <div>SHOWS</div>
         <div>
           An independent <br /> music partnership
         </div>
-        <div>open roles</div>
+        <div>MERCHANDISE</div>
         <div className="flex space-x-3 mt-5">
           <Link
             href="https://www.instagram.com/funkavenue254/"
