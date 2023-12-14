@@ -55,7 +55,7 @@ function Header() {
   };
 
   return (
-    <div>
+    <div id="top">
       <div
         ref={resMenu}
         className="fixed w-full top-0 left-0 overflow-hidden h-screen bg-black -translate-y-[1200px]">
@@ -133,16 +133,18 @@ function Header() {
         <div
           id="header"
           className="flex items-start justify-between w-[100%] h-fit">
-          <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
+          <Link
+            href="/"
+            className="cursor-pointer mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] leading-none">
             Funk <br /> Avenue
-          </div>
+          </Link>
           <ScrollLink
             to="work-section"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
-            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+            className="cursor-pointer mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             WORK
           </ScrollLink>
           <ScrollLink
@@ -151,7 +153,7 @@ function Header() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+            className="cursor-pointer mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             ABOUT
           </ScrollLink>
           <ScrollLink
@@ -160,7 +162,7 @@ function Header() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+            className="cursor-pointer mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             PUBLICATIONS
           </ScrollLink>
           <ScrollLink
@@ -169,7 +171,7 @@ function Header() {
             smooth={true}
             offset={-70}
             duration={500}
-            className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+            className="cursor-pointer mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
             STUDIO
           </ScrollLink>
           <div
